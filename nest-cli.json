@@ -1,0 +1,39 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/fed-test/src",
+  "monorepo": true,
+  "root": "apps/fed-test",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/fed-test/tsconfig.app.json"
+  },
+  "projects": {
+    "fed-test": {
+      "type": "application",
+      "root": "apps/fed-test",
+      "entryFile": "main",
+      "sourceRoot": "apps/fed-test/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/fed-test/tsconfig.app.json"
+      }
+    },
+    "users-service": {
+      "type": "application",
+      "root": "apps/users-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/users-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users-service/tsconfig.app.json"
+      }
+    },
+    "posts-service": {
+      "type": "application",
+      "root": "apps/posts-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/posts-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/posts-service/tsconfig.app.json"
+      }
+    }
+  }
+}
